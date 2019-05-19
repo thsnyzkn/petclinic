@@ -1,11 +1,11 @@
 package tahsin.springframework.petclinic.services.map;
 
 import tahsin.springframework.petclinic.model.Owner;
-import tahsin.springframework.petclinic.services.CrudService;
+import tahsin.springframework.petclinic.services.OwnerService;
 
 import java.util.Set;
 
-public class OwnerMapService extends AbstractMapService<Owner,Long> implements CrudService<Owner,Long> {
+public class OwnerMapService extends AbstractMapService<Owner,Long> implements OwnerService{
 
 
     @Override
@@ -32,5 +32,10 @@ public class OwnerMapService extends AbstractMapService<Owner,Long> implements C
     @Override
     public void deleteById(Long id) {
         super.deleteById(id);
+    }
+
+    @Override
+    public Owner findByLastName(String lastName) {
+        return null;
     }
 }
