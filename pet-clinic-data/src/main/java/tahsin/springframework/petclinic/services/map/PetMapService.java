@@ -1,10 +1,12 @@
 package tahsin.springframework.petclinic.services.map;
 
+import org.springframework.stereotype.Service;
 import tahsin.springframework.petclinic.model.Pet;
 import tahsin.springframework.petclinic.services.PetService;
 
 import java.util.Set;
 
+@Service
 public class PetMapService extends AbstractMapService<Pet,Long> implements PetService {
     @Override
     public Set<Pet> findAll() {

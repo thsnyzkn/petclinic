@@ -1,10 +1,12 @@
 package tahsin.springframework.petclinic.services.map;
 
+import org.springframework.stereotype.Service;
 import tahsin.springframework.petclinic.model.Owner;
 import tahsin.springframework.petclinic.services.OwnerService;
 
 import java.util.Set;
 
+@Service
 public class OwnerMapService extends AbstractMapService<Owner,Long> implements OwnerService{
 
 

@@ -6,8 +6,6 @@ import tahsin.springframework.petclinic.model.Owner;
 import tahsin.springframework.petclinic.model.Vet;
 import tahsin.springframework.petclinic.services.OwnerService;
 import tahsin.springframework.petclinic.services.VetService;
-import tahsin.springframework.petclinic.services.map.OwnerMapService;
-import tahsin.springframework.petclinic.services.map.VetMapService;
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -15,12 +13,11 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
 
-            ownerService = new OwnerMapService();
-            vetService = new VetMapService();
-        }
-
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
+    }
 
     @Override
     public void run(String... args) throws Exception {
